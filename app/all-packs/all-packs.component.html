@@ -1,0 +1,19 @@
+<header>
+    <h1> HOME LOAN APPLICATION</h1>
+</header>
+
+<table class="center">
+    
+    <tr *ngFor = "let item of getAllDetails()">
+        <td><img src="{{item.loanImage}}" width="150px" height="150px"/></td>
+        <td>{{item.loanName}}</td>
+        <td>{{item.loanCost | currency:'INR':'symbol-narrow':'4.2-2'}}</td>
+        <td>{{item.loanRating}}</td>
+        <td>{{item.loanInterest}}</td>
+        <td>{{item.loanStatus}}</td>
+        <td><button (click)="addToEnquire(item)">Add to Enquire</button></td>
+        <td><button (click)="shareLoan(item)">Share</button></td>
+        
+        
+    </tr>
+</table>
